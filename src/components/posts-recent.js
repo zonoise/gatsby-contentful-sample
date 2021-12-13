@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import * as React from "react";
 import * as styles from "./posts-recent.module.scss";
 
@@ -8,7 +9,9 @@ const PostsRecent = ({ edges }) => {
         {edges.map((edge) => {
           return (
             <div className={styles.post} key={edge.node.id}>
-              <a>{edge.node.title}</a>
+              <Link to={`/post/${edge.node.slug}`}>
+               <a>{edge.node.title}</a>
+              </Link>
             </div>
           );
         })}
