@@ -1,0 +1,46 @@
+.container {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.recent {
+    border-radius: 7px;
+    box-shadow: 0 0 5px gray;
+    width: 600px;
+    background-color: rgb(216, 216, 216);
+}
+
+.post {
+    position: relative;
+    width: 100%;
+}
+
+.post a {
+    color: #333;
+    line-height: 2.0rem;
+    display: block; //リンク範囲拡大
+    padding-left: 1em;
+}
+
+//リンク右端に>マーク
+.post a::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: rotate(45deg) translateY(-50%);
+	width: 6px;
+	height: 6px;
+	border-width: 2px 2px 0 0;
+	border-style: solid;
+	border-color: #333;
+}
+
+//間にだけ線を入れる
+.post:not(:first-child){
+    border-top: 1px solid rgb(124, 124, 124);
+}
