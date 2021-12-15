@@ -3,6 +3,7 @@ import { Link ,useStaticQuery,graphql} from 'gatsby'
 import Footer from './footer'
 import Header from './header'
 import * as styles from '../styles/components/layout.module.scss'
+import FooterFloat from './footer-float'
 
 const Layout = ({ pageTitle, children }) => {
 
@@ -28,6 +29,9 @@ const Layout = ({ pageTitle, children }) => {
       </main>
       <div className={styles.footer}>
         <Footer />
+      </div>
+      <div className={styles.floatFooter}>
+        <FooterFloat />
       </div>
     </div>
   )
