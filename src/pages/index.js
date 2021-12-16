@@ -6,6 +6,8 @@ import { getImage } from "gatsby-plugin-image"
 import Container from "../components/container";
 import Hero from "../components/hero";
 import PostsRecent from "../components/posts-recent";
+import PostsCard from "../components/posts-card";
+
 const IndexPage = ({ data }) => {
 
   const posts = data.allContentfulPost.edges;
@@ -15,8 +17,9 @@ const IndexPage = ({ data }) => {
       <Container>
         <Hero text="ヘッドレスCMS"/>
       </Container>
+      <PostsCard edges={posts}/>
       <PostsRecent edges={posts}/>
-      
+
       {data.allContentfulPost.edges.map((edge) => { 
         const image = getImage(edge.node.image);
         return (
