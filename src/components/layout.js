@@ -18,13 +18,14 @@ const Layout = ({ pageTitle, children }) => {
   `)
 
   return (
+    
     <div className={styles.root}>
-      {/* <title>{pageTitle} | {data.site.siteMetadata.title}</title> */}
-      <div>
-        <Header className={styles.header}/>
+      <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+      <div className={styles.header}>
+        
+        <Header />
       </div>
       <main className={styles.main}>
-        <h1>{pageTitle}</h1>
         {children}
       </main>
       <div className={styles.footer}>

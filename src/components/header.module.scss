@@ -1,0 +1,42 @@
+//reset
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    background-color: rgb(65, 65, 65);
+    box-shadow: 0 0 3px gray; 
+}
+
+.header > ul {
+    min-height: 2.0rem;
+    display:flex;
+    align-items: center;
+}
+
+.header a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    &:hover{
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+    }
+    display: block;
+    padding: 0.8rem;
+
+}
+
+.header > ul > li {
+   font-size: 1.2rem;
+   font-family: Arial, Helvetica, sans-serif;
+       background-color: rgb(151, 151, 151);
+}
+
+.right {
+    margin-left: auto ;
+}
