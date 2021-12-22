@@ -18,11 +18,9 @@ const Layout = ({ pageTitle, children }) => {
   `)
 
   return (
-    
     <div className={styles.root}>
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       <div className={styles.header}>
-        
         <Header />
       </div>
       <main className={styles.main}>

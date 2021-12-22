@@ -1,0 +1,61 @@
+.container {
+  background: linear-gradient(0deg, #50f14b 0%, #edfd9e 100%);
+}
+
+.h2 {
+  //reset
+  margin: 0;
+
+  color: white;
+  background-color: rgb(37, 37, 37);
+  padding: 7px;
+  text-align: center;
+  font-size: 1.4rem;
+
+  box-shadow: 0 0 3px gray;
+}
+.jobs {
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(0deg, #50f14b 0%, #edfd9e 100%);
+
+  // background-color:blue;
+  padding: 30px 20px;
+  row-gap: 20px;
+}
+
+.job {
+  border-radius: 5px;
+  box-shadow: 0 0 3px gray;
+  background-color: white;
+}
+
+.title {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+  padding: 0 10px;
+  font-size: 1.3rem;
+  color: white;
+  background-color: rgb(77, 77, 77);
+  padding: 4px 15px;
+}
+
+.content {
+  font-size: 1.2rem;
+  padding: 4px 15px;
+}
+
+.start,
+.end {
+  font-size: 0.7rem;
+}
+
+.end {
+  padding-left: 1em;
+}
+
+.startend {
+  padding: 0 15px 10px;
+}

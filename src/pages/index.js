@@ -7,10 +7,12 @@ import Container from "../components/container";
 import Hero from "../components/hero";
 import PostsRecent from "../components/posts-recent";
 import PostsCard from "../components/posts-card";
+import Jobs from "../components/jobs";
 
 const IndexPage = ({ data }) => {
 
   const posts = data.allContentfulPost.edges;
+  const jobs = data.allContentfulJobHistory.edges;
 
   return (
     <Layout pageTitle="Home Page">
@@ -20,13 +22,9 @@ const IndexPage = ({ data }) => {
       <PostsCard edges={posts}/>
       <PostsRecent edges={posts}/>
 
-      {data.allContentfulPost.edges.map((edge) => { 
-        const image = getImage(edge.node.image);
-        return (
-          <Card key={edge.node.id} text={edge.node.title} image={image} />
-        )
-        
-      })}
+      <Jobs edges={jobs}/>
+
+      
     </Layout>
   );
 };
@@ -48,6 +46,17 @@ export const query = graphql`
               url
             }
           }
+        }
+      }
+    }
+    allContentfulJobHistory(sort:{fields:order,order:DESC}) {
+      edges {
+        node {
+          id
+          title
+          content
+          start
+          end
         }
       }
     }
