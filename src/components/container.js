@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as styles from "../styles/components/container.module.scss";
+import * as styles from "./container.module.scss";
 const Container = ({ children }) => {
   return (
     <div className={styles.root}>

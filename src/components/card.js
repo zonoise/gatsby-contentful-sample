@@ -1,6 +1,6 @@
 import * as React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
-import * as styles from "../styles/components/card.module.scss";
+import * as styles from "./card.module.scss";
 const Card = ({ image, text }) => {
   return (
     <div className={styles.root}>

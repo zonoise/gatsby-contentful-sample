@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link ,useStaticQuery,graphql} from 'gatsby'
 import Footer from './footer'
 import Header from './header'
-import * as styles from '../styles/components/layout.module.scss'
+import * as styles from './layout.module.scss'
 import FooterFloat from './footer-float'
 
 const Layout = ({ pageTitle, children }) => {
